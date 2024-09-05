@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.notifications-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 1000;
+}
+
+.notification {
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.notification.success {
+  background-color: #4caf50;
+}
+
+.notification.error {
+  background-color: #f44336;
+}
+
+.notification p {
+  margin: 0;
+}
+
+@layer base {
+  .main-container {
+    @apply max-w-[1200px] mx-auto px-4;
+  }
+
+  /*Form Elements Styling*/
+  label {
+    @apply text-sm font-bold;
+  }
+  input {
+    @apply h-[40px] w-full border border-gray
+          placeholder-gray-light placeholder:font-thin
+            text-[2em] rounded-[5px] text-[1em] px-4;
+  }
+
+  select {
+    @apply h-[40px] w-full border border-gray
+          placeholder-gray-light placeholder:font-thin
+            text-[2em] rounded-[5px] text-[1em] px-4 bg-white;
+  }
+  select option:disabled {
+    @apply text-gray;
+  }
+
+  button {
+    @apply rounded-[5px] w-full text-black uppercase
+            h-[40px] font-semibold px-2  hover:border;
+  }
+  button img {
+    @apply w-[16px] h-[16px];
+  }
+  .button-container {
+    @apply flex gap-2 items-center justify-center;
+  }
+}
+
+/* class for hover filter effect */
+.hover-red:hover {
+  filter: invert(38%) sepia(94%) saturate(3930%) hue-rotate(357deg)
+    brightness(98%) contrast(119%);
+  cursor: pointer;
+  transition: all linear 200ms;
+}

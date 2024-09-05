@@ -1,0 +1,10 @@
+node_modules
+
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+
+venv/
+env/
+.env/
